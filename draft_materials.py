@@ -16,10 +16,21 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import requests
 
-# ---------------------------------------------------------------------------
-# Constants & Configuration
-# ---------------------------------------------------------------------------
-MODEL_NAME = os.environ.get("OLLAMA_MODEL", "qwen3:8b")
+def get_ollama_model(default: str = "llama3.2:3b") -> str:
+    env_model = os.environ.get("OLLAMA_MODEL")
+    if env_model:
+        return env_model
+    try:
+        res = requests.get("http://localhost:11434/api/tags", timeout=2)
+        if res.status_code == 200:
+            models = res.json().get("models", [])
+            if models:
+                return models[0]["name"]
+    except Exception:
+        pass
+    return default
+
+MODEL_NAME = get_ollama_model("llama3.2:3b")
 OLLAMA_URL = "http://localhost:11434/api/chat"
 OLLAMA_TIMEOUT = 60  # seconds per generation call
 DB_FILENAME = "jobs.db"

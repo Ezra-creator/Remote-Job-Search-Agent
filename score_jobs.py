@@ -19,8 +19,7 @@ import requests
 # ---------------------------------------------------------------------------
 # Constants & Configuration
 # ---------------------------------------------------------------------------
-# Default model: qwen3:8b. Swap to "llama3.2:3b" for lighter hardware.
-MODEL_NAME = "qwen3:8b"
+MODEL_NAME = os.environ.get("OLLAMA_MODEL", "qwen3:8b")
 OLLAMA_URL = "http://localhost:11434/api/chat"
 OLLAMA_TIMEOUT = 45  # seconds per request
 DB_FILENAME = "jobs.db"

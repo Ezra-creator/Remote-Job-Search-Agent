@@ -1,0 +1,32 @@
+{
+  "candidate": {
+    "name": "Ezra Appiah Gyamerah",
+    "email": "ezragyamerah17@gmail.com",
+    "github_username": "Ezra-creator",
+    "timezone": "UTC",
+    "current_role": "Software Engineer",
+    "years_experience": 3
+  },
+  "target": {
+    "roles": ["Senior Software Engineer", "Full Stack Developer", "Backend Engineer"],
+    "seniority": ["Mid-Level", "Lead"],
+    "salary_floor_usd": 130000,
+    "remote_only": true,
+    "visa_sponsorship_needed": false
+  },
+  "must_haves": ["Python or TypeScript", "Remote-first culture"],
+  "nice_to_haves": ["PostgreSQL", "FastAPI", "React"],
+  "dealbreakers": ["On-site requirement", "Unpaid internships"],
+  "excluded_companies": ["Lemon.io", "Miranda Creative, Inc."],
+  "skills": {
+    "core": ["Python", "JavaScript", "C#", "Blazor", "HTML", "CSS", "Tailwind", "Node.js", "Express", "FastAPI", "TypeScript", "React", "React Native", "Next.js", "PostgreSQL", "Docker"],
+    "familiar": ["Kubernetes", "AWS", "GraphQL", "Render", "Railway", "Vercel", "Netlify", "Git", "github"]
+  },
+  "fact_bank": [
+    {
+      "id": "f001",
+      "tags": ["experience", "leadership"],
+      "text": "Built AI agents."
+    }
+  ]
+}

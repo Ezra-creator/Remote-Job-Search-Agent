@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #171A21;
+  --color-paper: #F2F2EF;
+  --color-line: #D8D6CE;
+  --color-muted: #8A8A82;
+  --color-accent: #2B4C7E;
+  --color-warn: #9C3B33;
+
+  --font-sans: var(--font-plex-sans), sans-serif;
+  --font-mono: var(--font-plex-mono), monospace;
+
+  --radius-DEFAULT: 6px;
+  --radius-sm: 6px;
+  --radius-md: 6px;
+  --radius-lg: 6px;
+  --radius-xl: 6px;
+  --radius-2xl: 6px;
+  --radius-3xl: 6px;
+}
+
+:root {
+  --background: #F2F2EF;
+  --foreground: #171A21;
+}
+
+body {
+  background: #F2F2EF;
+  color: #171A21;
+  font-family: var(--font-plex-sans), sans-serif;
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

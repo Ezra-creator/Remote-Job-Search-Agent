@@ -133,8 +133,9 @@ export default function AppliedPage() {
       {/* ------------------------------------------------------------------ */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold text-ink font-sans">
-            Ready to apply ({readyJobs.length})
+          <h2 className="text-sm font-semibold text-ink font-sans flex items-baseline gap-1.5">
+            <span>Ready to apply</span>
+            <span className="font-mono font-normal text-muted">{readyJobs.length}</span>
           </h2>
         </div>
 
@@ -240,8 +241,9 @@ export default function AppliedPage() {
       {/* ------------------------------------------------------------------ */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold text-ink font-sans">
-            Follow-ups needed ({followupJobs.length})
+          <h2 className="text-sm font-semibold text-ink font-sans flex items-baseline gap-1.5">
+            <span>Follow-ups needed</span>
+            <span className="font-mono font-normal text-muted">{followupJobs.length}</span>
           </h2>
           <span className="font-mono text-xs text-muted">Applied &gt; 7 days ago</span>
         </div>
@@ -296,8 +298,9 @@ export default function AppliedPage() {
       {/* ------------------------------------------------------------------ */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold text-ink font-sans">
-            Application history ({appliedJobs.length})
+          <h2 className="text-sm font-semibold text-ink font-sans flex items-baseline gap-1.5">
+            <span>Application history</span>
+            <span className="font-mono font-normal text-muted">{appliedJobs.length}</span>
           </h2>
         </div>
 
@@ -323,12 +326,12 @@ export default function AppliedPage() {
 
                 <div className="font-mono text-xs text-muted">
                   {job.follow_up_sent_at ? (
-                    <span className="text-accent inline-flex items-center gap-1">
+                    <span className="inline-flex items-center gap-1 text-muted">
                       <Check className="h-3 w-3" aria-hidden="true" />
                       <span>Followed up {formatDate(job.follow_up_sent_at)}</span>
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1">
+                    <span className="inline-flex items-center gap-1 text-muted">
                       <Clock className="h-3 w-3" aria-hidden="true" />
                       <span>Pending response</span>
                     </span>

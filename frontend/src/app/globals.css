@@ -25,10 +25,22 @@
   --foreground: #171A21;
 }
 
-body {
+html, body {
   background: #F2F2EF;
   color: #171A21;
   font-family: var(--font-plex-sans), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-plex-sans), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-plex-mono), monospace !important;
+}
+
+.font-sans {
+  font-family: var(--font-plex-sans), sans-serif !important;
 }
 
 @keyframes slideOutRight {

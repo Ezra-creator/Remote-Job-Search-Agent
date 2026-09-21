@@ -41,8 +41,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plexSans.variable} ${plexMono.variable}`}>
-      <body className="min-h-screen bg-paper text-ink antialiased font-sans pb-24 md:pb-12">
+    <html
+      lang="en"
+      className={`${plexSans.variable} ${plexMono.variable} ${plexSans.className}`}
+    >
+      <body className={`min-h-screen bg-paper text-ink antialiased font-sans pb-24 md:pb-12 ${plexSans.className}`}>
         <Navigation />
         <main className="mx-auto max-w-4xl px-4 py-6 sm:px-6">{children}</main>
       </body>
